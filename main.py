@@ -27,9 +27,9 @@ async def send_telegram_msg(summary: str):
             if response.status_code == 200:
                 print("✅ SUCCESS: Telegram message sent!")
             else:
-                print(f"❌ TELEGRAM ERROR {response.status_code}: {response.text}")
+                print(f"TELEGRAM ERROR {response.status_code}: {response.text}")
         except Exception as e:
-            print(f"❌ CONNECTION ERROR: {e}")
+            print(f"CONNECTION ERROR: {e}")
 
 
 # 4. The "Webhook" endpoint that Vapi will call
