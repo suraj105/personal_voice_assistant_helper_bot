@@ -2,9 +2,6 @@ from flask import Flask, request , redirect
 
 app = Flask(__name__)
 
-app = Flask(__name__)
-
-
 @app.route('/')
 def home():
     # 1. Capture the Lead's Name
@@ -15,9 +12,8 @@ def home():
     with open("leads.txt", "a") as f:
         f.write(f"Lead: {lead_name} clicked the link!\n")
 
-    # 3. SEND THEM TO YOUR REAL WEBSITE
-    # Replace the URL below with your actual website or Calendly link
-    return redirect("https://your-actual-website.com")
+    # 3. SEND traffic to destinated website
+    return redirect("")
 
 
 if __name__ == '__main__':
